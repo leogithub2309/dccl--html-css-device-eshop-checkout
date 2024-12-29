@@ -9,7 +9,7 @@ const $ul = d.querySelector(".list-items"),
     $tax = d.querySelector('.tax'),
     $total = d.querySelector('.total'),
     span = d.querySelector('.error');
- 
+  
 const $fragment = d.createDocumentFragment();
 
 const listProducts = [
@@ -73,9 +73,6 @@ function getCouponDiscound(){
         }
     });
 }
-let n = 2938, s = "11110";
-console.log(n.toString(2));
-console.info(parseInt(s, 2));
 
 const deleteProduct = (btn, totalPrices) => {
 
