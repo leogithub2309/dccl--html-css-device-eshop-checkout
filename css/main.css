@@ -1,0 +1,526 @@
+:root{
+    --gray-dark-color: #6C727F;
+    --dark-color: #1D1D1F;
+    --gray-light-color: #D2D5DA;
+    --white-color: #F3F4F6;
+    --text-light-color: #FFFFFF;
+    --gray-light-text-color: #00000033;
+    --blue-color: #95AAD0;
+    --desktop-width: 1280px;
+    --table-width: 1024px;
+    --smartphone-width: 640px;
+
+}
+
+@font-face {
+    font-family: 'Inter Italic';
+    src: url('../fonts/Inter-Italic-VariableFont_opsz\,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Inter VariableFont';
+    src: url('../fonts/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+/*  Reset Styles */
+html{
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: var(--white-color);
+    font-family: 'Inter VariableFont';
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+p{
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/* Class Aux  */
+.mb-3{
+    margin-bottom: 1.25rem;
+}
+
+.mb-4{
+    margin-bottom: 1.75rem;
+}
+
+/* A */
+.app-store{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-light-color);
+    border-radius: 1rem;
+    box-shadow: 1px 4px 4px -1px var(--gray-light-color);
+}
+
+
+/*  B */
+.banger{
+    background-color: var(--gray-dark-color);
+    width: auto;
+    padding: 6px 10px;
+    color: var(--dark-color);
+    font-size: .75rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .5px;
+}
+
+.banger.banger-blue{
+    background-color: var(--blue-color);
+    color: var(--text-light-color);
+}
+
+.btn{
+    width: 100%;
+    height: 46px;
+    background-color: var(--gray-light-color);
+    border: 1px solid var(--dark-color);
+    font-size: 1rem;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: .55rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.btn.btn-dark{
+    background-color: var(--dark-color);
+    color: var(--text-light-color);
+}
+
+/* C */
+.container{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-img{
+    background-color: var(--white-color);
+    border-radius: 1rem;
+    padding: .55rem 1rem;
+    border: 1px solid var(--gray-light-color);
+    width: 6rem;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-img img{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.contact-form{
+    width: 100%;
+    max-width: 100%;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+}
+
+.col-1{
+    width: 50%;
+    margin-bottom: .55rem;
+}
+
+/*  D */
+.divider{
+    background-color: var(--gray-light-color);
+    width: 100%;
+    height: 2px;
+    margin: 2rem 0;
+}
+
+/*  E */
+.error{
+    font-size: .75rem;
+    color: crimson;
+    margin: 0;
+    padding: 0px 1px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.error.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* F */
+.form-cupon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.form-cupon div{
+    width: 90%;
+}
+
+.form-cupon input{
+    width: 100%;
+    height: 46px;
+    border: 1px solid var(--gray-light-color);
+    background-color: var(--text-light-color);
+    border-radius: .55rem;
+    padding: 6px 10px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color .5s ease-in-out;
+}
+
+.form-cupon input:focus,
+.form-contact input:focus,
+.form-contact select:focus{
+    border-color: var(--dark-color);
+}
+
+.form-cupon input.error-input,
+.form-contact input.error-input,
+.form-contact select.error-input{
+    border-color: crimson;
+}
+
+.form-cupon .btn{
+    width: 34%;
+}
+
+.form-contact{
+    width: 100%;
+}
+
+.form-contact input, 
+.form-contact select{
+    width: 100%;
+    height: 56px;
+    border: 1px solid var(--gray-light-color);
+    background-color: var(--white-color);
+    border-radius: .55rem;
+    padding: 6px 10px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color .5s ease;
+}
+
+.form-contact label{
+    color: var(--gray-dark-color);
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.form-contact .row div > select,
+.form-contact .row div > input{
+    margin-top: 1rem;
+}
+
+.form-error{
+    margin: .75rem auto;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+}
+
+.form-error > *{
+    font-size: 1.1rem;
+    color: crimson;
+}
+
+.form-error.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*  I */
+.info-product{
+    width: 100%;
+    height: 60px;
+    padding: 6px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+/*  L */
+.list-items{
+    padding-left: 0;
+    width: 100%;
+    position: relative;
+}
+
+.list-element-item{
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 14px;
+    margin: 1.5rem 0;
+}
+
+.list-element-item.delete{
+    display: none;
+}
+
+.list-element-item .name-product{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: .30rem;
+}
+
+.list-element-item .color-product{
+    color: var(--gray-dark-color);
+    font-weight: 600;
+}
+
+.list-element-item .total-product{
+    color: var(--gray-dark-color);
+    font-weight: 400;
+    position: absolute;
+    bottom: 0px;
+}
+
+.list-element-item .price-product{
+    font-family: 'Inter Italic';
+}
+
+.list-element-item .close{
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0px;
+}
+
+.list-element-item .close > * {pointer-events: none}
+
+.list-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: .55rem 1.2rem;
+    margin-top: 1rem;
+}
+
+.list-total .description-total p,
+.list-total .total-price p{
+    margin: .43rem 0;
+    font-weight: 600;
+}
+
+.list-total .description-total p:nth-child(1),
+.list-total .description-total p:nth-child(2){
+    color: var(--gray-dark-color);
+}
+
+.list-total .total-price p:nth-child(1),
+.list-total .total-price p:nth-child(2){
+    color: var(--gray-dark-color);
+}
+
+/*  R */
+.row{
+    display: flex;
+    gap: 12px;
+}
+
+/*  S  */
+
+/*  T */
+.title{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-top: -4rem;
+}
+
+
+
+@media(min-width: 1280px) {
+
+    .section-lg{
+        position: relative;
+        background-image: url('../assets/background-image.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        min-height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-lg .app-store{
+        position: absolute;
+        top: 50%;
+        width: var(--desktop-width);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .section-lg .app-store .list-product{
+        width: 100%;
+        background-color: #e4e4e4;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .section-lg .app-store .contact-form{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--text-light-color);
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 2rem;
+        margin-top: 1rem;
+        
+    }
+}
+
+@media(max-width: 1279px) {
+    
+    .section-md{
+        position: relative;
+        background-image: url('../assets/background-image.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        min-height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-md .app-store{
+        position: absolute;
+        top: 50%;
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .section-md .app-store .list-product{
+        width: 100%;
+        background-color: #e4e4e4;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .section-md .app-store .contact-form{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--text-light-color);
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media(max-width: 640px) {
+
+    .section-md{
+        position: initial;
+    }
+
+    .section-sm{
+        background-image: url('../assets/background-image@2x.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-sm .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .section-sm .container .app-store{
+        margin-top: 6rem;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .section-sm .app-store .list-product{
+        width: 100%;
+        background-color: #e4e4e4;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+        padding: 1rem;
+    }
+
+    .section-sm .app-store .contact-form{
+        width: 100%;
+        background-color: var(--text-light-color);
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 2rem;
+        margin-top: 1rem;
+    }
+}

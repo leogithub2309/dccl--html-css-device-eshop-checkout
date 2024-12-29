@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device eShop</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <div class="section section-sm section-md section-lg"> 
+        <div class="container">
+            <h1 class="title" style="margin-bottom: 1rem;">Checkout  <span class="banger banger-blue">3 Items</span></h1>
+            <section class="app-store">
+                <article class="list-product">
+                    <ul class="list-items"></ul>
+                    <div class="divider"></div>
+                    <form action="#" class="form-cupon">
+                        <div>
+                            <input type="text" name="cupon" id="cupon" placeholder="Enter coupon code" pattern="^[0-9]+$">
+                            <span class="error"></span>
+                        </div>
+                        <button class="btn btn-dark">Apply Coupon</button>
+                    </form>
+                    <section class="list-total">
+                        <article class="description-total">
+                            <p>Sub total</p>
+                            <p>Tax</p>
+                            <p>Total</p>
+                        </article>
+                        <article class="total-price">
+                            <p class="sub-total"></p>
+                            <p class="tax"></p>
+                            <p class="total"></p>
+                        </article>
+                    </section>
+                </article>
+                <article class="contact-form">
+                    <form action="#" autocomplete="off" class="form-contact">
+                       <h2 class="mb-4">Contact Information</h2>
+                       <div class="mb-3 col">
+                            <label for="firtsLastName">First & Last name</label>
+                            <input type="text" name="firtsLastName" id="firtsLastName" placeholder="First & Last name" pattern="^([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$">
+                            <span class="error"></span>
+                       </div>
+                       <div class="mb-3 col">
+                            <label for="email">Email Address</label>
+                            <input type="text" name="email" id="email" placeholder="Enter email address" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
+                            <span class="error"></span>
+                       </div>
+                       <div class="mb-3 row">
+                            <div class="mb-3 col-1">
+                                <label for="country">Country</label>
+                                <select name="country" id="country">
+                                    <option value="--">Select Country</option>
+                                    <option value="0">Finland</option>
+                                    <option value="1">Germany</option>
+                                    <option value="2">Poland</option>
+                                    <option value="3">Spain</option>
+                                    <option value="4">England</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 col-1">
+                                <label for="postalCode">Postal Code</label>
+                                <input type="text" name="postalCode" id="postalCode" placeholder="00270" pattern="^[0-9]+$" maxlength="5">
+                                <span class="error"></span>
+                            </div>
+                       </div>
+                       <button class="btn btn-dark">Continue</button>
+                       <div class="form-error">
+                            <p>Los campos del formulario, están incompletos</p>
+                       </div>
+                    </form>
+                </article>
+            </section>
+        </div>
+    </div>
+
+
+    <script src="./js/main.js"></script>
+    
+</body>
+</html>
